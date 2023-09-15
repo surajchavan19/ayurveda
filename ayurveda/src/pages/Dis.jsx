@@ -28,7 +28,7 @@ function Dis() {
 
     return (
         <div>
-            <div className="mx-auto container py-8">
+            <div className="d-flex flex-column mx-auto container py-8 w-50 items-center">
                 <h1>Disease Prediction</h1>
                 <Select
                     closeMenuOnSelect={false}
@@ -39,7 +39,11 @@ function Dis() {
                     onChange={setHandle}
                 />
                 <div>{selectedOptions}</div>
+
+                <div className='flex justify-center w-1/2'>
+
                 <BarChart result={result}/>
+                </div>
             </div>
         </div>
     )

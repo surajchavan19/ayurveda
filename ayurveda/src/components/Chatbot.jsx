@@ -1,9 +1,10 @@
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
+import { ImCross } from "react-icons/im";
 
-const Chatbot = () => {
+const Chatbot = ({ toggleBotStatus }) => {
   const [question, setQuestion] = useState("");
-
+  const [output, setOutputText] = useState("");
   //   const fetchResult = () => {
   //     var settings = {
   //       url: "http://127.0.0.1:8001/v1/get-response",
@@ -20,6 +21,13 @@ const Chatbot = () => {
   //   };
   return (
     <div className="fixed bottom-4 right-4 w-72">
+      <div className="w-full flex justify-end mb-2">
+        <ImCross
+          onClick={() => {
+            toggleBotStatus();
+          }}
+        />
+      </div>
       <div className="h-72 bg-slate-300 drop-shadow-md rounded-md overflow-y-auto p-4 font-sans">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -38,7 +46,14 @@ const Chatbot = () => {
           placeholder="what's your question?"
           variant="standard"
         />
-        <button className="p-2 ml-4">reset</button>
+        <button
+          className="p-2 ml-4"
+          onClick={() => {
+            setOutputText("");
+          }}
+        >
+          reset
+        </button>
       </div>
     </div>
   );

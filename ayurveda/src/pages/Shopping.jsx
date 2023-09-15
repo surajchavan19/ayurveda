@@ -1,11 +1,10 @@
 import React from "react";
-import ShopCard from "@/components/ShopCard";
-import Navbar1 from "@/components/Navbar1";
+import Navbar1 from "../components/Navbar1";
+import ShopCard from "../components/ShopCard";
 
 const Shopping = () => {
   return (
     <div className="w-full">
-      <Navbar1 />
       <div className="w-full h-48 bg-slate-400 flex justify-center items-center">
         <span className="text-4xl text-white"> Pitta</span>
       </div>

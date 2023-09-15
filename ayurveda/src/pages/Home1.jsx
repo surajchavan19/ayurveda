@@ -9,8 +9,10 @@ import Image from "react-bootstrap/Image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Button from "react-bootstrap/Button";
+import Chatbot from "../components/Chatbot";
+import { BsRobot } from "react-icons/bs";
 
-const Home1 = () => {
+const Home1 = ({ isbotActive, toggleBotStatus }) => {
   return (
     <div>
       <div
@@ -164,7 +166,18 @@ const Home1 = () => {
           </Row>
         </Container>
       </div>
-      <hr style={{ margin: "0" }} />/
+      <hr style={{ margin: "0" }} />
+      {isbotActive && <Chatbot toggleBotStatus={toggleBotStatus} />}
+      {!isbotActive && (
+        <div
+          className="fixed bottom-4 right-4 rounded-full w-16 h-16 bg-sky-500 flex justify-center items-center"
+          onClick={() => {
+            toggleBotStatus();
+          }}
+        >
+          <BsRobot size={24} color="white" />
+        </div>
+      )}
     </div>
   );
 };

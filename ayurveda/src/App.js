@@ -7,6 +7,8 @@ import Navbar1 from "./components/Navbar1";
 import Home1 from "./pages/Home1";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Shopping from "./pages/Shopping";
+import Disease from "./pages/Dis";
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home1 />} />
           <Route path="/shop" element={<Shopping />} />
+          <Route path="/disease" element={<Disease />} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>

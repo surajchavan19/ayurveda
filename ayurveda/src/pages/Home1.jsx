@@ -11,8 +11,11 @@ import { Carousel } from "react-responsive-carousel";
 import Button from "react-bootstrap/Button";
 import Chatbot from "../components/Chatbot";
 import { BsRobot } from "react-icons/bs";
+import {useNavigate} from "react-router-dom";
 
 const Home1 = ({ isbotActive, toggleBotStatus }) => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div
@@ -121,6 +124,7 @@ const Home1 = ({ isbotActive, toggleBotStatus }) => {
                 <h1>Ask our vaidyas</h1>
                 <h4>"Sarve Santu Nirmaya"</h4>
                 <button
+              onClick={() => navigate("/videos")}
                   style={{
                     padding: "1% 2% 1% 2%",
                     backgroundColor: "white",
@@ -153,6 +157,7 @@ const Home1 = ({ isbotActive, toggleBotStatus }) => {
                 <h1>Academy</h1>
                 <h4>"Thamaso Ma Jyothirgamaya"</h4>
                 <button
+                 onClick={() => navigate("/videos")}
                   style={{
                     padding: "1% 2% 1% 2%",
                     backgroundColor: "white",

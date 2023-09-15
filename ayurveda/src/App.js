@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import VideoLearning from "./pages/VideoLearning";
 import Chatbot from "./components/Chatbot";
 import Shopping from "./pages/Shopping";
+import Disease from "./pages/Dis";
+
 function App() {
   const [botActive, setBotActive] = useState(false);
   const toggleBotStatus = () => {
@@ -31,6 +33,7 @@ function App() {
           />
           <Route path="/videos" element={<VideoLearning />} />
           <Route path="/shop" element={<Shopping />} />
+          <Route path="/disease" element={<Disease />} />
         </Routes>
         {/* <Footer /> */}
 

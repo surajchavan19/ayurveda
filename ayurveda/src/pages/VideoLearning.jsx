@@ -57,7 +57,7 @@ function VideoLearning() {
     <div className="container mx-auto p-4">
       <div className="w-full flex ">
         <div className="flex-1">
-          <img src={yoga} className="w-[75%] p-12 ml-20" alt="" />
+          <img src={yoga} className="w-[75%] p-6 ml-20" alt="" />
         </div>
 
         <div className="flex-1 flex-col items-center mt-32">
@@ -141,19 +141,17 @@ function VideoLearning() {
         </FormControl> */}
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-3 gap-2">
         {/* <iframe
           src="https://www.youtube.com/embeded/AB3Y-4a3ZrU"
           frameborder="0"
         ></iframe> */}
         {output?.map((video, index) => (
           // const url = getId(video.link)(
-          <div key={index} className=" p-4 w-full  mr-12 mt-4 mb-4">
+          <div key={index} className=" p-4 w-full  mt-4 mb-4">
             <ReactPlayer
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
+             width='80%'
+             height='95%'
               url={video.link}
             />
 

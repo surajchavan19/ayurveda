@@ -24,11 +24,13 @@ const Home1 = ({ isbotActive, toggleBotStatus }) => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
-      >
-        <h1>hi</h1>
-      </div>
+      ></div>
       <Container className="align-items-center text-center pt-5 pb-5">
-        <h1 className="text-left mb-5"> Buy Natural Products</h1>
+        <h1 className="text-center mb-5">
+          <u style={{ textDecoration: "underline", color: "green" }}>
+            <span> Buy Natural Products</span>
+          </u>
+        </h1>
         <Row>
           <Col style={{ border: "1px solid black", padding: "3% 2% 3% 2%" }}>
             <Image src={background} fluid className="mt-5 mb-5" />
@@ -91,7 +93,7 @@ const Home1 = ({ isbotActive, toggleBotStatus }) => {
       <hr style={{ margin: "0" }} />
       <div
         style={{
-          backgroundColor: "rgb(230,230,230 )",
+          backgroundColor: "rgb(55,126,34)",
           padding: "0",
           margin: "0",
         }}

@@ -13,7 +13,12 @@ function BarChart({ result }) {
 
       const x = d3.scaleBand().range([0, width]).padding(0.1);
       const y = d3.scaleLinear().range([height, 0]);
+      const chartElement = chartRef.current;
 
+      // Remove all existing child nodes in the chart element
+      while (chartElement.firstChild) {
+        chartElement.removeChild(chartElement.firstChild);
+      }
       const svg = d3.select(chartRef.current).append('svg')
         .attr('width', width + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
